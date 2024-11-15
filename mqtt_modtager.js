@@ -6,6 +6,7 @@ function modtager(fiskespil, modtagetBesked) {
 	{
 	    let value = modtagerBuffer.val;
 	    // do something with the received value
+		console.log(mSend);
 	}
 	
    
