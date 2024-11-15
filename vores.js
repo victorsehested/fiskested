@@ -1,7 +1,7 @@
 function setup() {
-    console.log('');
+    
 }
 
 function draw() {
-    
+    console.log(mSend);
 }
