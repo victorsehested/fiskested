@@ -3,8 +3,5 @@ function modtager(topic, modtagetBesked) {
 	
     let afsenderen = modtagerBuffer.from;
 	let value = modtagerBuffer.val;
-	
-	
-	
-   
+	   
 }
