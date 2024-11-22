@@ -4,7 +4,8 @@ function modtager(fiskespil, modtagetBesked) {
     let afsenderen = modtagerBuffer.from;
 	if (afsenderen == afsenderID)
 	{
-	    let value = modtagerBuffer.val;
+	    acceleration = modtagerBuffer.val1;
+		gamma = modtagerBuffer.val2;
 	    // do something with the received value
 		console.log(value);
 		console.log("Received message:", modtagetBesked);
@@ -14,3 +15,4 @@ function modtager(fiskespil, modtagetBesked) {
 }
 
 console.log("AAAAAAAAAAAAAAAAAAReceived message:", modtagetBesked);
+
