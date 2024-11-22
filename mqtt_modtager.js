@@ -5,6 +5,6 @@ function modtager(topic, modtagetBesked) {
 	let string = modtagerBuffer.string;
 }
 
-function draw() {
-	console.log(string);
+function mouseClicked() {
+    console.log(string);
 }
