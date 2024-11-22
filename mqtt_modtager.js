@@ -2,9 +2,7 @@ function modtager(topic, modtagetBesked) {
     let modtagerBuffer = JSON.parse(modtagetBesked);
 	
     let afsenderen = modtagerBuffer.from;
-	let string = modtagerBuffer.string;
+	let value = modtagerBuffer.val;
+    let value2 = modtagerBuffer.val2; 
 }
 
-function mouseClicked() {
-    console.log(string);
-}
