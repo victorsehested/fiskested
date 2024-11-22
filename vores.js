@@ -1,3 +1,5 @@
+/*
+
 let img; 
 let imgSize; 
 let growthRate = 10; 
@@ -51,3 +53,5 @@ function draw() {
   }
 
 }
+
+*/

@@ -1,13 +1,13 @@
-let value1 = 0;
-let value2 = 0;
-let value3 = 0;
-let value4 = 0;
-let string;
-
 function setup() {
+    createCanvas(1000,1000);
+    background('blue');
 }
 
 
 function draw() {
+    //console.log(string);
+}
+
+function mouseClicked() {
     console.log(string);
 }
