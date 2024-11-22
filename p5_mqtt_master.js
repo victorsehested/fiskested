@@ -1,13 +1,25 @@
-function setup() {
-    createCanvas(1000,1000);
-    background('blue');
-}
+let alfa = 0;
+let beta = 0;
+let val = 0;
+let kastet = false;
 
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  fill('yellow');
+  textAlign(CENTER, CENTER);
+  text('Jeg modtager', windowWidth / 2, windowHeight / 2);
+}
 
 function draw() {
-    //console.log(string);
-}
+  background(220);
 
-function mouseClicked() {
-    console.log(string);
+  // Display received values
+  fill('yellow');
+  text(`alfa: ${alfa}`, width / 2, height / 2 - 40);
+  text(`beta: ${beta}`, width / 2, height / 2);
+  text(`val (gamma): ${val}`, width / 2, height / 2 + 40);
+  text(`kastet: ${kastet ? "Yes" : "No"}`, width / 2, height / 2 + 80);
+
+  // Debugging log
+  console.log("Current values:", { alfa, beta, val, kastet });
 }
