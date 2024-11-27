@@ -2,6 +2,7 @@
 let amplitude;
 let img;
 let bubbles = []; // array til flere bobler
+let vol;
 
 function preload() {
   img = loadImage('bubble2.png'); // bubbles billede
@@ -12,19 +13,22 @@ function setup() {
   background('black');
   
   // mikrofon input
+  /*
   mic = new p5.AudioIn();
   mic.start();
   
+
   // amplitude input
   amplitude = new p5.Amplitude();
   amplitude.setInput(mic);
+  */
 }
 
 function draw() {
   background(0, 0, 0); // transperant baggrund for fade-effect
   
   // indlæs mikrofon level
-  let vol;
+  
   
   // Check if volume exceeds threshold (for detecting blow)
   if (vol > 0.1) {
