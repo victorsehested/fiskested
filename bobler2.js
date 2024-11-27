@@ -24,7 +24,7 @@ function draw() {
   background(0, 0, 0); // transperant baggrund for fade-effect
   
   // indlæs mikrofon level
-  let vol = amplitude.getLevel();
+  let vol;
   
   // Check if volume exceeds threshold (for detecting blow)
   if (vol > 0.1) {
