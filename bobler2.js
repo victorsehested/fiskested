@@ -21,7 +21,7 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0, 50); // transperant baggrund for fade-effect
+  background(0, 0, 0); // transperant baggrund for fade-effect
   
   // indlæs mikrofon level
   let vol = amplitude.getLevel();
