@@ -4,7 +4,7 @@ function modtager(topic, modtagetBesked) {
     let afsenderen = modtagerBuffer.from;
 	if (afsenderen != afsenderID)
 	{
-	    let value = modtagerBuffer.val;
+	    let vol = modtagerBuffer.val;
 	    // do something with the received value
 	}
 	
