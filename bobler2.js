@@ -25,6 +25,7 @@ function setup() {
 }
 
 function draw() {
+  console.log(vol);
   background(0, 0, 0); // transperant baggrund for fade-effect
   
   // indlæs mikrofon level
