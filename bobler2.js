@@ -2,42 +2,54 @@ let mic;
 let amplitude;
 let img;
 let bubbles = []; // array til flere bobler
-let vol;
+let telefonMic=0;
+
+// Baggrundsvideo
+let vid;
+let playing = true;
+let acceleration = 0;
+let gamma = 0;
 
 function preload() {
   img = loadImage('bubble2.png'); // bubbles billede
+  vid = createVideo('aquarium.mp4');
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background('black');
   
+  // Video background
+  vid.size(windowWidth, windowHeight);
+  vid.volume(0);
+  vid.loop();
+  vid.hide(); // Hide the HTML element since we want to draw the video on the canvas
+
+  
+ /*
   // mikrofon input
-  /*
   mic = new p5.AudioIn();
   mic.start();
   
-
   // amplitude input
   amplitude = new p5.Amplitude();
   amplitude.setInput(mic);
-  */
+ */
 }
 
+
 function draw() {
-  console.log(vol);
-  background(0, 0, 0); // transperant baggrund for fade-effect
+  image(vid, 0, 0, width, height);
   
   // indlæs mikrofon level
-  
+  // let vol = amplitude.getLevel();
   
   // Check if volume exceeds threshold (for detecting blow)
-  if (vol > 0.1) {
-    let bubbleSize = map(vol, 0, 1, 50, 150); // lydvolumen mappes til bubblesize
+  if (telefonMic > 0.1) {
+    let bubbleSize = map(telefonMic, 0, 1, 50, 150); // lydvolumen mappes til bubblesize
     bubbles.push(new Bubble(random(width), height, bubbleSize)); // bobler starter random x i bunden af skærm
-  }
+}
   
-  // Display and move each bubble
+  // Vis og bevæg hver bubble
   for (let i = bubbles.length - 1; i >= 0; i--) {
     bubbles[i].move();
     bubbles[i].display();
@@ -69,5 +81,7 @@ class Bubble {
   display() {
     imageMode(CENTER);
     image(img, this.x, this.y, this.size, this.size);
+    
+    imageMode(CORNER);
   }
 }
